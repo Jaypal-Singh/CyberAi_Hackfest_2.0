@@ -71,3 +71,9 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #9333ea #030308;
 }
+    animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+.hover-pause:hover {
+    animation-play-state: paused;
+}
