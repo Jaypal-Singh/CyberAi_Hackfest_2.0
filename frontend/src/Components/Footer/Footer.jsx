@@ -31,7 +31,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start">
                         <h3 className="text-xl font-bold mb-6 text-white text-center md:text-left">Quick Links</h3>
                         <ul className="space-y-3 w-full flex flex-col items-center md:items-start">
-                            {['Home', 'Sponsors', 'Events', 'Timeline', 'Our Team', 'Gallery', 'Contact'].map((item) => (
+                            {['Home', 'Sponsors', 'Timeline', 'OurTeam', 'Gallery', 'Contacts'].map((item) => (
                                 <li key={item} className="flex items-center group cursor-pointer hover:translate-x-2 transition-transform duration-300">
                                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2 group-hover:scale-150 transition-transform"></span>
                                     <a href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`} className="text-gray-400 group-hover:text-purple-400 transition-colors">
