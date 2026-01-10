@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import logo from "../../assets/hakathon_logo/logo.jpeg";
 import isglogo from "../../assets/sponsors/isg.png";
@@ -83,10 +81,10 @@ const SponsorCard = ({ sponsor }) => {
     >
       {/* HOVER ELEMENT: VISIT WEBSITE */}
       <div className="absolute -top-20 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform group-hover:-translate-y-4 z-30">
-        <div className="bg-black/90 border border-fuchsia-500 text-fuchsia-500 px-5 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] flex items-center gap-2 backdrop-blur-md shadow-[0_0_20px_rgba(217,70,239,0.4)]">
+        <div className="bg-black/90 border border-purple-500 text-purple-500 px-5 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] flex items-center gap-2 backdrop-blur-md shadow-[0_0_20px_rgba(217,70,239,0.4)]">
           VISIT WEBSITE <span className="text-xs">↗</span>
         </div>
-        <div className="absolute left-1/2 top-full w-[1px] h-20 bg-gradient-to-b from-fuchsia-500 via-purple-500/50 to-transparent -translate-x-1/2"></div>
+        <div className="absolute left-1/2 top-full w-[1px] h-20 bg-gradient-to-b from-purple-500 via-purple-500/50 to-transparent -translate-x-1/2"></div>
       </div>
 
       {/* MAIN CARD BODY */}
@@ -109,7 +107,7 @@ const SponsorCard = ({ sponsor }) => {
           className="relative z-10 max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
         />
 
-        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-fuchsia-500/20 blur-[30px] rounded-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-purple-500/20 blur-[30px] rounded-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
       </div>
     </a>
   );
@@ -130,23 +128,20 @@ const CyberSponsorPage = () => {
 
       <header className="relative z-10 flex flex-col items-center mb-16 space-y-4">
         <div className="flex items-center gap-6">
-          <div className="relative group">
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-40 h-40 object-contain relative z-10"
-            />
-            <div className="absolute inset-0 bg-fuchsia-500/20 blur-xl rounded-full scale-110 group-hover:bg-fuchsia-500/40 transition-all"></div>
-          </div>
+          <img
+            src={logo}
+            alt="Ingenium 2026"
+            className="h-[190px] object-contain mb-2  rounded-xl p-2"
+          />
         </div>
       </header>
 
       {/* Hero Title */}
       <div className="relative z-10 mb-20 text-center">
-        <h2 className="text-7xl md:text-[10rem] font-black tracking-[0.15em] text-fuchsia-900/10 uppercase select-none">
+        <h2 className="text-7xl md:text-[10rem] font-black tracking-[0.15em] text-fuchsia-900/10 uppercase select-none font-[oswald]">
           SPONSORS
         </h2>
-        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl md:text-8xl font-bold tracking-[0.4em] text-white whitespace-nowrap">
+        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl md:text-8xl font-bold tracking-[0.4em] text-white whitespace-nowrap font-[oswald]">
           SPONSORS
         </h2>
       </div>
@@ -170,15 +165,15 @@ const CyberSponsorPage = () => {
       {/* Section Title */}
       <div className="relative z-10 text-center mb-24">
         <h3 className="text-4xl md:text-7xl font-black italic tracking-tighter uppercase">
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-fuchsia-400 to-purple-600">
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-purple-400 to-purple-600">
             {activeTab}
           </span>
           <span className="ml-4 text-white">SPONSORS</span>
         </h3>
         <div className="mt-8 flex justify-center items-center gap-4">
-          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent to-fuchsia-500"></div>
-          <div className="w-2 h-2 rounded-full bg-fuchsia-500 shadow-[0_0_15px_#d946ef]"></div>
-          <div className="h-[1px] w-24 bg-gradient-to-l from-transparent to-fuchsia-500"></div>
+          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent to-purple-500"></div>
+          <div className="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_15px_#d946ef]"></div>
+          <div className="h-[1px] w-24 bg-gradient-to-l from-transparent to-purple-500"></div>
         </div>
       </div>
 
