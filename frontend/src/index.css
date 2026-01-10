@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #0a0a0a;
+    /* Ensure background color matches */
+    color: white;
+}
