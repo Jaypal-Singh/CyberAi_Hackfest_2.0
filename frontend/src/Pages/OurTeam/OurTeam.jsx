@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../../Assests/logo.jpeg";
+import logo from "../../assets/hakathon_logo/logo.jpeg";
 import SponsorsGrid from "../Sponsors/SponsorsGrid";
 import "./OurTeam.css";
-import skdada from "../../Assests/skdada.jpeg";
+import skdada from "../../assets/sponsors/spu.png";
 
 // Add your team member data here
 const TEAM_DATA = {
