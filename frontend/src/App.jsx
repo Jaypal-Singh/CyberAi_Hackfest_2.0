@@ -21,7 +21,7 @@ function App() {
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/ourteam" element={<OurTeam />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contacts" element={<Contact />} />
         </Routes>
       </div>
     </div>

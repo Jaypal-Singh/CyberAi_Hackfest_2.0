@@ -31,7 +31,7 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-8 list-none m-0 p-0">
-                    {['Home', 'Sp', 'Tracks', 'Results', 'FAQ', 'Organized By'].map((item) => (
+                    {['Home', 'Sponsors', 'Timeline', 'OurTeam', 'Gallery', 'Contacts'].map((item) => (
                         <li key={item}>
                             <Link
                                 to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`}
