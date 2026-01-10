@@ -1,36 +1,76 @@
 @import "tailwindcss";
 
 html {
-    scrollbar-gutter: stable;
+  scrollbar-gutter: stable;
 }
 
 body {
-    overflow-x: hidden;
-    background-color: #0a0a0a;
-    color: white;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
+  color: white;
 }
 
 @keyframes grid-flow {
-    0% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
 
-    100% {
-        background-position: 0 80px;
-    }
+  100% {
+    background-position: 0 80px;
+  }
 }
 
 .animate-grid-flow {
-    animation: grid-flow 20s linear infinite;
+  animation: grid-flow 20s linear infinite;
 }
 
 @keyframes scroll {
-    to {
-        transform: translate(calc(-50% - 0.5rem));
-    }
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 .animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+}
+
+/* --- Custom Purple Cyberpunk Scrollbar --- */
+
+/* 1. Overall Scrollbar Width */
+::-webkit-scrollbar {
+  width: 10px; /* Slightly wider for a better glow effect */
+}
+
+/* 2. The Track (The background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #030308; /* Dark background to match your site */
+  border-left: 1px solid rgba(147, 51, 234, 0.1); /* Subtle purple edge */
+}
+
+/* 3. The Thumb (The draggable part) */
+::-webkit-scrollbar-thumb {
+  /* Gradient from Deep Purple to Electric Violet */
+  background: linear-gradient(to bottom, #7e22ce, #a855f7, #7e22ce);
+  border-radius: 20px;
+  border: 3px solid #030308; /* Gap between thumb and track for "floating" look */
+
+  /* Neon Purple Glow */
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+/* 4. Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #9333ea, #c084fc, #9333ea);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.8); /* Brighter glow on hover */
+  cursor: pointer;
+}
+
+/* For Firefox Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea #030308;
+}
     animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 }
 
