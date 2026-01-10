@@ -17,10 +17,8 @@ const Navbar = () => {
             <nav
                 style={{
                     transform: `scale(${scale})`,
-                    backdropFilter: `blur(${10 + blur}px)`,
-                    opacity: opacity
                 }}
-                className="flex justify-between items-center bg-[#0f0f11]/80 px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[90%] max-w-[1200px] border border-white/10 shadow-2xl relative z-50 mt-5 will-change-transform"
+                className="flex justify-between items-center bg-white/5 backdrop-blur-md px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[90%] max-w-[1200px] border border-white/10 shadow-lg absolute top-0 left-0 right-0 z-50 mt-5 will-change-transform transition-all"
             >
                 <div className="flex items-center gap-3">
                     <div className="flex flex-col leading-none">
@@ -71,7 +69,7 @@ const Navbar = () => {
                 </button>
 
                 <ul className="flex flex-col gap-8 text-center list-none p-0 m-0">
-                    {['Home', 'Highlights', 'Tracks', 'Results', 'FAQ', 'Organized By'].map((item) => (
+                    {['Home', 'Sponsors', 'Timeline', 'OurTeam', 'Gallery', 'Contacts'].map((item) => (
                         <li key={item}>
                             <Link
                                 to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`}

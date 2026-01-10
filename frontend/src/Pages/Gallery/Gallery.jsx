@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/hakathon_logo/logo.jpeg";
-import SponsorsGrid from "../Sponsors/SponsorsGrid";
+import { GridBackground } from "../../Components/GridBackground/GridBackground";
 import skdada from "../../assets/sponsors/spu.png";
 
 // Empty array for your 9 images
@@ -53,7 +53,7 @@ const GalleryCard = ({ image }) => {
 const Gallery = () => {
   return (
     <div className="relative min-h-screen w-full bg-[#030308] text-white flex flex-col items-center pt-10 pb-40 px-6 overflow-hidden">
-      <SponsorsGrid />
+      <GridBackground className="absolute inset-0 z-0 h-full w-full" />
 
       {/* Header Logo */}
       <header className="relative z-10 flex flex-col items-center mb-16">
