@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../Assests/logo.jpeg'
+import logo from '../../assets/hakathon_logo/logo.jpeg'
 import useSmoothScroll from '../../Hooks/useSmoothScroll'
 
 const Navbar = () => {

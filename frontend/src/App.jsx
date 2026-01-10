@@ -8,6 +8,7 @@ import Timeline from './Pages/Timeline/Timeline'
 import OurTeam from './Pages/OurTeam/OurTeam'
 import Gallery from './Pages/Gallery/Gallery'
 import Contact from './Pages/Contact/Contact'
+import Footer from './Components/Footer/Footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contacts" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   )

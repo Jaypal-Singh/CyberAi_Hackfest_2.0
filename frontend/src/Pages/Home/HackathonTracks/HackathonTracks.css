@@ -1,0 +1,12 @@
+.custom-spotlight-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Slight bounce for premium feel */
+    will-change: transform, box-shadow;
+}
+
+.custom-spotlight-card:hover {
+    transform: translateY(-8px);
+    z-index: 10;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    /* Smoother shadow */
+}

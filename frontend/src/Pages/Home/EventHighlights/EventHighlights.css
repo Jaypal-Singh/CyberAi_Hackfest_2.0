@@ -1,0 +1,32 @@
+.highlights-container {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 20;
+    /* Ensure seamless transition if needed, though usually standard flow is fine */
+}
+
+.highlights-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.highlights-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a855f7;
+    /* Purple */
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.highlights-subtitle {
+    color: #ccc;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Unused styles removed - Card styling is now handled by CardHoverEffect component with Tailwind */
