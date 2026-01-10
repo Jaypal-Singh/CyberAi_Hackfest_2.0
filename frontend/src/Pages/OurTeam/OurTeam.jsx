@@ -67,7 +67,7 @@ const TeamCard = ({ member }) => {
   return (
     <div className="group relative flex flex-col items-center [perspective:1000px]">
       {/* 1. UPPER BOX: PHOTO */}
-      <div className="relative w-full aspect-square bg-[#0d0d15] border border-fuchsia-500/30 rounded-t-2xl overflow-hidden transition-all duration-500 group-hover:border-fuchsia-500 shadow-[0_0_20px_rgba(217,70,239,0.1)]">
+      <div className="relative w-full aspect-square bg-[#0d0d15] border border-purple-500/30 rounded-t-2xl overflow-hidden transition-all duration-500 group-hover:border-purple-500 shadow-[0_0_20px_rgba(217,70,239,0.1)]">
         {/* Internal Grid */}
         <div
           className="absolute inset-0 opacity-10"
@@ -84,19 +84,19 @@ const TeamCard = ({ member }) => {
         />
 
         {/* Scanning Line Effect */}
-        <div className="absolute inset-0 w-full h-[1px] bg-fuchsia-500/40 top-0 group-hover:animate-[scan_2s_linear_infinite] pointer-events-none"></div>
+        <div className="absolute inset-0 w-full h-[1px] bg-purple-500/40 top-0 group-hover:animate-[scan_2s_linear_infinite] pointer-events-none"></div>
       </div>
 
       {/* 2. THE CONNECTOR (Small notch between boxes) */}
-      <div className="w-full h-[2px] bg-fuchsia-500 shadow-[0_0_10px_#d946ef]"></div>
+      <div className="w-full h-[2px] bg-purple-500 shadow-[0_0_10px_#d946ef]"></div>
 
       {/* 3. LOWER BOX: NAME & ROLE */}
-      <div className="relative w-full py-4 px-6 bg-[#0a0a10] border-x border-b border-fuchsia-500/30 rounded-b-2xl transition-all duration-500 group-hover:bg-fuchsia-900/10 group-hover:border-fuchsia-500">
+      <div className="relative w-full py-4 px-6 bg-[#0a0a10] border-x border-b border-purple-500/30 rounded-b-2xl transition-all duration-500 group-hover:bg-fuchsia-900/10 group-hover:border-purple-500">
         {/* Accent Corner (Top Left Small Triangle) */}
-        <div className="absolute top-0 left-0 w-0 h-0 border-t-[10px] border-t-fuchsia-500 border-r-[10px] border-r-transparent"></div>
+        <div className="absolute top-0 left-0 w-0 h-0 border-t-[10px] border-t-purple-500 border-r-[10px] border-r-transparent"></div>
 
         <div className="text-center">
-          <p className="text-fuchsia-500 text-[10px] font-black tracking-[0.3em] uppercase mb-1">
+          <p className="text-purple-500 text-[10px] font-black tracking-[0.3em] uppercase mb-1">
             {member.role}
           </p>
           <h3 className="text-xl font-bold tracking-wider text-white uppercase italic">
@@ -121,26 +121,23 @@ const OurTeam = () => {
       {/* Header Logo */}
       <header className="relative z-10 flex flex-col items-center mb-16 space-y-4">
         <div className="flex items-center gap-6">
-          <div className="relative group">
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-40 h-40 object-contain relative z-10"
-            />
-            <div className="absolute inset-0 bg-fuchsia-500/20 blur-xl rounded-full scale-110 group-hover:bg-fuchsia-500/40 transition-all"></div>
-          </div>
+          <img
+            src={logo}
+            alt="Ingenium 2026"
+            className="h-[190px] object-contain mb-2  rounded-xl p-2"
+          />
         </div>
       </header>
 
       {/* Main Title */}
       <div className="relative z-10 mb-20 text-center">
-        <h2 className="text-4xl md:text-7xl font-bold tracking-[0.3em] text-white uppercase ">
-          MEET OUR TEAM
+        <h2 className="text-4xl md:text-7xl font-bold tracking-[0.3em] text-white uppercase font-[oswald]">
+          MEET OUR <span className="text-purple-600">TEAM</span>
         </h2>
         <div className="flex items-center justify-center gap-4 mt-6">
-          <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent"></div>
-          <div className="w-2 h-2 rotate-45 bg-fuchsia-500 shadow-[0_0_15px_#d946ef]"></div>
-          <div className="h-[2px] w-24 bg-gradient-to-l from-transparent via-fuchsia-500 to-transparent"></div>
+          <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+          <div className="w-2 h-2 rotate-45 bg-purple-500 shadow-[0_0_15px_#d946ef]"></div>
+          <div className="h-[2px] w-24 bg-gradient-to-l from-transparent via-purple-500 to-transparent"></div>
         </div>
       </div>
 
@@ -150,10 +147,10 @@ const OurTeam = () => {
           <div key={sectionTitle} className="flex flex-col items-center">
             {/* Section Sub-heading */}
             <div className="mb-16">
-              <h3 className="text-2xl md:text-4xl font-black tracking-widest text-fuchsia-500 uppercase italic">
+              <h3 className="text-2xl md:text-4xl font-black tracking-widest text-purple-500 uppercase italic">
                 // {sectionTitle}
               </h3>
-              <div className="w-full h-1 bg-fuchsia-500/20 mt-2"></div>
+              <div className="w-full h-1 bg-purple-500/20 mt-2"></div>
             </div>
 
             {/* Grid for this specific section */}
