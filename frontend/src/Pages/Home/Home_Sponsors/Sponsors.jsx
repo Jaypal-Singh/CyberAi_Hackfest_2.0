@@ -6,12 +6,12 @@ const Sponsors = () => {
         <div className="h-[40rem] rounded-md flex flex-col antialiased bg-black dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
             <h2 className="text-4xl font-bold text-center text-purple-500 mb-10 uppercase tracking-wider z-10">Our Sponsors</h2>
             <InfiniteMovingCards
-                items={testimonials}
+                items={firstRow}
                 direction="right"
                 speed="slow"
             />
             <InfiniteMovingCards
-                items={testimonials}
+                items={secondRow}
                 direction="left"
                 speed="slow"
                 className="mt-10"
@@ -78,5 +78,7 @@ const testimonials = [
         title: "Sponsor",
     },
 ];
+const firstRow = testimonials.slice(0, 5);
+const secondRow = testimonials.slice(5);
 
 export default Sponsors;
