@@ -1,0 +1,170 @@
+.about-container {
+    background: linear-gradient(to bottom, transparent, #000 150px);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 20;
+    /* Ensure it sits above particles if necessary */
+    overflow: hidden;
+    margin-top: -150px;
+    /* Pull up to overlap Hero */
+    padding-top: 150px;
+    /* Push content down */
+}
+
+/* Removed ::before as mask-image handles the fade better */
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: top; */
+    position: relative;
+    top: -100px;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.about-logo-placeholder {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.tech-text {
+    font-family: 'Outfit', sans-serif;
+    /* Or existing font */
+    letter-spacing: 2px;
+}
+
+.logo-year {
+    font-size: 1.5rem;
+    color: #a855f7;
+    /* Purple to match theme */
+}
+
+.about-right {
+    flex: 1.2;
+    min-width: 300px;
+    padding: 2rem;
+    border-left: 1px solid #333;
+}
+
+.about-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
+
+.stat-plus {
+    color: #a855f7;
+    font-size: 1.5rem;
+    vertical-align: top;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #a855f7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        padding-top: 4rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .about-left {
+        top: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        /* Align logo to center */
+        text-align: center;
+    }
+
+    .about-logo-placeholder img {
+
+        width: 100%;
+        max-width: 250px;
+
+        margin: 0 auto;
+    }
+
+    .about-right {
+        border-left: none;
+
+        padding: 0;
+        padding-top: 1rem;
+        margin-top: 0;
+        border: none;
+        /* Cleaner look */
+        width: 100%;
+    }
+
+    .about-description {
+        text-align: left;
+        font-size: 0.95rem;
+        /* Slightly customizable */
+        margin-bottom: 2rem;
+    }
+
+    .about-stats {
+        /* Grid layout for stats on mobile for better space usage */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        /* Smaller numbers on mobile */
+    }
+}

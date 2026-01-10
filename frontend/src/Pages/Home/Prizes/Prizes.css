@@ -1,0 +1,156 @@
+.prizes-container {
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000 !important;
+}
+
+.prizes-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.prizes-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.podium-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    /* Fallback for very small screens */
+}
+
+.podium-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.podium-item:hover {
+    transform: translateY(-5px);
+}
+
+.first-place {
+    order: 2;
+    /* Visual order in flex row */
+    margin-bottom: 2rem;
+    /* Lift it up relative to others if aligning bottom, or just size */
+}
+
+.second-place {
+    order: 1;
+}
+
+.third-place {
+    order: 3;
+}
+
+.trophy-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+.first-place .trophy-icon {
+    width: 100px;
+    height: 100px;
+    color: #ffd700;
+    /* Gold */
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+}
+
+.second-place .trophy-icon {
+    color: #c0c0c0;
+    /* Silver */
+    filter: drop-shadow(0 0 15px rgba(192, 192, 192, 0.4));
+}
+
+.third-place .trophy-icon {
+    color: #cd7f32;
+    /* Bronze */
+    filter: drop-shadow(0 0 15px rgba(205, 127, 50, 0.4));
+}
+
+.prize-rank {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.first-place .prize-rank {
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+.second-place .prize-rank {
+    color: #c0c0c0;
+}
+
+.third-place .prize-rank {
+    color: #cd7f32;
+}
+
+.prize-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.first-place .prize-amount {
+    font-size: 2.5rem;
+}
+
+.consolation-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.consolation-title {
+    color: #a855f7;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.consolation-amount {
+    color: #fff;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .podium-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .first-place {
+        order: 1;
+        /* First on mobile */
+    }
+
+    .second-place {
+        order: 2;
+    }
+
+    .third-place {
+        order: 3;
+    }
+}
