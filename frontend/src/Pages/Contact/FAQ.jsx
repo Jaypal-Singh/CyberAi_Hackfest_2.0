@@ -39,9 +39,9 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What is CyberAi HackFest?",
+      question: "What is CyberAi HackFest 2.0?",
       answer:
-        "CyberAi HackFest is the annual tech festival of SPU, featuring hackathons, coding competitions, robotics, and more. It's a platform for students to showcase their technical skills and innovation.",
+        "CyberAi HackFest 2.0 is the annual tech festival of SPU, featuring hackathons, coding competitions, robotics, and more. It's a platform for students to showcase their technical skills and innovation.",
     },
     {
       question: "How can I participate?",
