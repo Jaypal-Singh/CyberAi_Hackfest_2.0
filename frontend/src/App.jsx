@@ -9,11 +9,13 @@ import OurTeam from './Pages/OurTeam/OurTeam'
 import Gallery from './Pages/Gallery/Gallery'
 import Contact from './Pages/Contact/Contact'
 import Footer from './Components/Footer/Footer'
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 
 function App() {
   return (
     <div className="app-container relative min-h-screen text-white">
       <div className="relative z-10">
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
