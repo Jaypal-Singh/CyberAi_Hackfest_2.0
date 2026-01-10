@@ -52,7 +52,7 @@ const GalleryCard = ({ image }) => {
 
 const Gallery = () => {
   return (
-    <div className="relative min-h-screen w-full bg-[#030308] text-white flex flex-col items-center pt-10 pb-40 px-6 overflow-hidden">
+    <div className="relative min-h-screen w-full bg-[#030308] text-white flex flex-col items-center pt-20 pb-40 px-6 overflow-hidden">
       <GridBackground className="absolute inset-0 z-0 h-full w-full" />
 
       {/* Header Logo */}
