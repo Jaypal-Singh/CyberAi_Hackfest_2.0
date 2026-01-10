@@ -74,7 +74,7 @@ const EventHighlights = () => {
         <section className="highlights-container">
             <div className="highlights-header">
                 <h2 className="highlights-title">Event Highlights</h2>
-                <p className="highlights-subtitle">Experience the ultimate coding challenge at Parul University's flagship hackathon</p>
+                <p className="highlights-subtitle">Experience the ultimate coding challenge at Sankalchand patel University's flagship hackathon</p>
             </div>
 
             <div className="max-w-7xl mx-auto px-8">
