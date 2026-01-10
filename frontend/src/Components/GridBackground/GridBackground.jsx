@@ -11,10 +11,13 @@ export function GridBackground({ children, className }) {
         >
             <div
                 className={cn(
-                    "absolute inset-0 pointer-events-none animate-grid-flow",
+                    "absolute inset-0 pointer-events-none",
                     "[background-size:80px_80px]",
                     "[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
                 )}
+                style={{
+                    animation: "grid-flow 5s linear infinite",
+                }}
             />
 
 
