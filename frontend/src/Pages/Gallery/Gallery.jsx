@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../../Assests/logo.jpeg";
+import logo from "../../assets/hakathon_logo/logo.jpeg";
 import SponsorsGrid from "../Sponsors/SponsorsGrid";
-import skdada from "../../Assests/skdada.jpeg";
+import skdada from "../../assets/sponsors/spu.png";
 
 // Empty array for your 9 images
 const GALLERY_IMAGES = [
