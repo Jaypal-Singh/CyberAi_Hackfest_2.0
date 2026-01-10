@@ -8,7 +8,7 @@ import istelogo from "../../assets/sponsors/iste.png";
 import recomailogo from "../../assets/sponsors/recomai.png";
 import techdefencelabslogo from "../../assets/sponsors/techdefence.png";
 import edutechlogo from "../../assets/sponsors/lnt.png";
-import SponsorsGrid from "./SponsorsGrid";
+import { GridBackground } from "../../Components/GridBackground/GridBackground";
 
 // 1. ADDED 'url' TO EACH SPONSOR
 const SPONSORS_DATA = [
@@ -124,7 +124,7 @@ const CyberSponsorPage = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-[#030308] text-white flex flex-col items-center pt-20 pb-40 px-6 overflow-hidden">
-      <SponsorsGrid />
+      <GridBackground className="absolute inset-0 z-0 h-full w-full" />
 
       <header className="relative z-10 flex flex-col items-center mb-16 space-y-4">
         <div className="flex items-center gap-6">
@@ -152,11 +152,10 @@ const CyberSponsorPage = () => {
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`px-8 py-2.5 rounded-full text-[10px] font-black tracking-[0.25em] transition-all duration-500 uppercase ${
-              activeTab === cat
-                ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-[0_0_30px_rgba(192,38,211,0.4)] scale-105"
-                : "text-white/40 hover:text-white"
-            }`}
+            className={`px-8 py-2.5 rounded-full text-[10px] font-black tracking-[0.25em] transition-all duration-500 uppercase ${activeTab === cat
+              ? "bg-gradient-to-r from-fuchsia-600 to-purple-700 text-white shadow-[0_0_30px_rgba(192,38,211,0.4)] scale-105"
+              : "text-white/40 hover:text-white"
+              }`}
           >
             {cat}
           </button>
