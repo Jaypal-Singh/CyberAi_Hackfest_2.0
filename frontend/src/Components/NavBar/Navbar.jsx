@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/hakathon_logo/logo.jpeg'
 import useSmoothScroll from '../../Hooks/useSmoothScroll'
 
 const Navbar = () => {
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -22,16 +23,22 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-8 list-none m-0 p-0">
-                    {['Home', 'Sponsors', 'Timeline', 'OurTeam', 'Gallery', 'Contacts'].map((item) => (
-                        <li key={item}>
-                            <Link
-                                to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`}
-                                className="text-[#a0a0a0] hover:text-purple-300 hover:underline underline-offset-4 text-[0.95rem] font-medium transition-all duration-500"
-                            >
-                                {item}
-                            </Link>
-                        </li>
-                    ))}
+                    {['Home', 'Sponsors', 'Timeline', 'OurTeam', 'Gallery', 'Contacts'].map((item) => {
+                        const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`;
+                        const isActive = location.pathname === path;
+
+                        return (
+                            <li key={item}>
+                                <Link
+                                    to={path}
+                                    className={`text-[0.95rem] font-medium transition-all duration-500 hover:text-purple-300 hover:underline underline-offset-4 ${isActive ? "text-purple-500 font-bold scale-110" : "text-[#a0a0a0]"
+                                        }`}
+                                >
+                                    {item}
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
 
                 <div className="flex items-center gap-4">
@@ -62,17 +69,23 @@ const Navbar = () => {
                 </button>
 
                 <ul className="flex flex-col gap-8 text-center list-none p-0 m-0">
-                    {['Home', 'Sponsors', 'Timeline', 'OurTeam', 'Gallery', 'Contacts'].map((item) => (
-                        <li key={item}>
-                            <Link
-                                to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`}
-                                className="text-3xl font-bold text-white hover:text-purple-400 transition-colors"
-                                onClick={toggleMenu}
-                            >
-                                {item}
-                            </Link>
-                        </li>
-                    ))}
+                    {['Home', 'Sponsors', 'Timeline', 'Our Team', 'Gallery', 'Contacts'].map((item) => {
+                        const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`;
+                        const isActive = location.pathname === path;
+
+                        return (
+                            <li key={item}>
+                                <Link
+                                    to={path}
+                                    className={`text-3xl font-bold transition-colors ${isActive ? "text-purple-500" : "text-white hover:text-purple-400"
+                                        }`}
+                                    onClick={toggleMenu}
+                                >
+                                    {item}
+                                </Link>
+                            </li>
+                        );
+                    })}
                     <li className="mt-4">
                         <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-10 rounded-full shadow-lg shadow-purple-500/30 text-xl transform hover:scale-105 transition-transform">
                             Register Now
