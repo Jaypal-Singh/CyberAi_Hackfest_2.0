@@ -166,10 +166,10 @@ const CyberSponsorPage = () => {
       {/* Section Title */}
       <div className="relative z-10 text-center mb-24">
         <h3 className="text-3xl md:text-7xl font-black italic tracking-tighter uppercase">
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-purple-400 to-purple-600">
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-purple-400 to-purple-600 font-[oswald]">
             {activeTab}
           </span>
-          <span className="ml-4 text-white">SPONSORS</span>
+          <span className="ml-4 text-white font-[oswald]">SPONSORS</span>
         </h3>
         <div className="mt-8 flex justify-center items-center gap-4">
           <div className="h-[1px] w-24 bg-gradient-to-r from-transparent to-purple-500"></div>
