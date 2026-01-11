@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SpotlightCard from "../../../Components/SpotlightCard/SpotlightCard";
 import "./HackathonTracks.css";
 
 const HackathonTracks = () => {
   const tracks = [
     {
+      id: "ai-ml",
       title: "Artificial Intelligence & Machine Learning",
       color: "#ec4899", // Pink
       icon: (
@@ -29,6 +31,7 @@ const HackathonTracks = () => {
       ),
     },
     {
+      id: "cyber-security",
       title: "Cyber Security & Digital Forensics",
       color: "#a855f7", // Purple
       icon: (
@@ -47,6 +50,7 @@ const HackathonTracks = () => {
       ),
     },
     {
+      id: "smart-technologies",
       title: "Smart & Sustainable Technologies",
       color: "#f97316", // Orange
       icon: (
@@ -69,6 +73,7 @@ const HackathonTracks = () => {
       ),
     },
     {
+      id: "industry-4-0",
       title: "Industry 4.0 & Emerging Technologies",
       color: "#8b5cf6", // Violet
       icon: (
@@ -89,6 +94,7 @@ const HackathonTracks = () => {
       ),
     },
     {
+      id: "big-data",
       title: "Big Data",
       color: "#3b82f6", // Blue
       icon: (
@@ -109,6 +115,7 @@ const HackathonTracks = () => {
       ),
     },
     {
+      id: "cloud-computing",
       title: "Cloud Computing",
       color: "#0ea5e9", // Sky
       icon: (
@@ -127,6 +134,7 @@ const HackathonTracks = () => {
       ),
     },
     {
+      id: "iot",
       title: "IoT ( Internet of Things )",
       color: "#22c55e", // Green
       icon: (
@@ -150,6 +158,7 @@ const HackathonTracks = () => {
     },
 
     {
+      id: "blockchain",
       title: "Blockchain",
       color: "#f59e0b", // Amber
       icon: (
@@ -207,8 +216,8 @@ const HackathonTracks = () => {
                 {track.title}
               </h3>
 
-              <a
-                href="#"
+              <Link
+                to={`/tracks/${track.id}`}
                 className="mt-auto flex items-center text-sm font-medium"
                 style={{ color: track.color }}
               >
@@ -226,7 +235,7 @@ const HackathonTracks = () => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </SpotlightCard>
         ))}

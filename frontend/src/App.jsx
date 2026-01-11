@@ -11,6 +11,8 @@ import Contact from './Pages/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 
+import ProblemStatements from './Pages/Home/HackathonTracks/ProblemStatements'
+
 function App() {
   return (
     <div className="app-container relative min-h-screen text-white">
@@ -25,6 +27,7 @@ function App() {
           <Route path="/ourteam" element={<OurTeam />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contacts" element={<Contact />} />
+          <Route path="/tracks/:trackId" element={<ProblemStatements />} />
         </Routes>
         <Footer />
       </div>
