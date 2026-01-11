@@ -9,8 +9,7 @@ const Timer = () => {
     });
 
     useEffect(() => {
-        // Set the date we're counting down to (e.g., 2 weeks from now for demo)
-        const countDownDate = new Date().getTime() + 14 * 24 * 60 * 60 * 1000;
+        const countDownDate = new Date("Jan 23, 2026 09:00:00").getTime();
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
