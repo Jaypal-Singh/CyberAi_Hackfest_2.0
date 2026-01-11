@@ -138,10 +138,10 @@ const CyberSponsorPage = () => {
 
       {/* Hero Title */}
       <div className="relative z-10 mb-20 text-center">
-        <h2 className="text-7xl md:text-[10rem] font-black tracking-[0.15em] text-fuchsia-900/10 uppercase select-none font-[oswald]">
+        <h2 className="text-6xl md:text-[10rem] font-black tracking-[0.15em] text-fuchsia-900/10 uppercase select-none font-[oswald]">
           SPONSORS
         </h2>
-        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl md:text-8xl font-bold tracking-[0.4em] text-white whitespace-nowrap font-[oswald]">
+        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl md:text-8xl font-bold tracking-[0.4em] text-white whitespace-nowrap font-[oswald]">
           SPONSORS
         </h2>
       </div>
