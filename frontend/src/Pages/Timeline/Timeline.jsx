@@ -88,21 +88,26 @@ const Timeline = () => {
     <div className="w-full relative bg-black">
       <GridBackground className="absolute inset-0 z-0 h-full w-full" />
       <div className="relative z-10 pt-20">
-        <div className="flex flex-col items-center justify-center mb-10">
-          <img
-            src={logo}
-            alt="Ingenium 2026"
-            className="h-[190px] object-contain mb-2  rounded-xl p-2"
-          />
-          <div className="relative">
-            <h1 className="text-5xl md:text-8xl font-bold text-white tracking-[0.2em] font-[oswald] uppercase">
-              TIME<span className="text-purple-600">LINE</span>
-            </h1>
-            <div className="flex items-center justify-center gap-4 mt-6">
-              <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-              <div className="w-2 h-2 rotate-45 bg-purple-500 shadow-[0_0_15px_#d946ef]"></div>
-              <div className="h-[2px] w-24 bg-gradient-to-l from-transparent via-purple-500 to-transparent"></div>
-            </div>
+        {/* Header Logo */}
+        <header className="relative z-10 flex flex-col items-center mb-16 space-y-4">
+          <div className="flex items-center gap-6">
+            <img
+              src={logo}
+              alt="Ingenium 2026"
+              className="h-[190px] object-contain mb-2  rounded-xl p-2"
+            />
+          </div>
+        </header>
+
+        {/* Title Section */}
+        <div className="relative z-10 mb-5 text-center">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-[0.3em] text-white uppercase font-[oswald]">
+            TIME <span className="text-purple-600">LINE</span>
+          </h2>
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+            <div className="w-2 h-2 rotate-45 bg-purple-500 shadow-[0_0_15px_#d946ef]"></div>
+            <div className="h-[2px] w-24 bg-gradient-to-l from-transparent via-purple-500 to-transparent"></div>
           </div>
         </div>
         <AceternityTimeline data={data} />
