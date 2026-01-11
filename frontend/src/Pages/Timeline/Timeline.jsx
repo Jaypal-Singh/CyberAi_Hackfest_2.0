@@ -5,7 +5,7 @@ import { Timeline as AceternityTimeline } from "../../Components/ui/timeline";
 const Timeline = () => {
   const data = [
     {
-      title: "1st Dec 2025",
+      title: "1st Mar 2026",
       content: (
         <div>
           <h4 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-2">
@@ -20,14 +20,13 @@ const Timeline = () => {
             <ul className="list-disc list-inside text-neutral-400 text-sm space-y-2">
               <li>Team Size: 3-5 Members</li>
               <li>Free Registration</li>
-              <li>Idea Submission Required</li>
             </ul>
           </div>
         </div>
       ),
     },
     {
-      title: "10th Jan 2026",
+      title: "10th Mar 2026",
       content: (
         <div>
           <h4 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-2">
@@ -42,7 +41,7 @@ const Timeline = () => {
       ),
     },
     {
-      title: "17th Jan - 8:00 AM",
+      title: "15th Mar - 8:00 AM",
       content: (
         <div>
           <h4 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-2">
@@ -56,7 +55,7 @@ const Timeline = () => {
       ),
     },
     {
-      title: "17th Jan - 9:30 AM",
+      title: "15th Mar - 9:30 AM",
       content: (
         <div>
           <h4 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-2">
