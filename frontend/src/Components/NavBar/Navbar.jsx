@@ -4,160 +4,224 @@ import logo from "../../assets/hakathon_logo/logo.jpeg";
 import useSmoothScroll from "../../Hooks/useSmoothScroll";
 
 const Navbar = () => {
-    const location = useLocation();
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    // Close menu when route changes
-    React.useEffect(() => {
-        setIsMenuOpen(false);
-    }, [location]);
+  // Close menu when route changes
+  React.useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
-    // Prevent body scroll when menu is open
-    React.useEffect(() => {
-        if (isMenuOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "unset";
-        }
-    }, [isMenuOpen]);
+  // Prevent body scroll when menu is open
+  React.useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isMenuOpen]);
 
-    const navLinks = [
-        { name: "Home", path: "/" },
-        { name: "Sponsors", path: "/sponsors" },
-        { name: "Timeline", path: "/timeline" },
-        { name: "Our Team", path: "/ourteam" },
-        { name: "Gallery", path: "/gallery" },
-        { name: "Contacts", path: "/contacts" },
-    ];
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Sponsors", path: "/sponsors" },
+    { name: "Timeline", path: "/timeline" },
+    { name: "Our Team", path: "/ourteam" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contacts", path: "/contacts" },
+  ];
 
-    return (
-        <>
-            <nav className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center bg-white/5 backdrop-blur-md px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[90%] max-w-[1200px] border border-white/10 shadow-lg transition-all">
-                <div className="flex items-center gap-3">
-                    <div className="flex flex-col leading-none">
-                        <span className="text-xl font-bold text-white tracking-wide">
-                            SPU
-                        </span>
-                    </div>
-                    <img
-                        src={logo}
-                        alt="SPU Logo"
-                        className="h-10 md:h-12 w-auto rounded-full object-contain"
-                    />
-                </div>
+  return (
+    <>
+      <nav className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center bg-white/5 backdrop-blur-md px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[90%] max-w-[1200px] border border-white/10 shadow-lg transition-all">
+        <div className="flex items-center gap-3">
+          <div className="flex flex-col leading-none">
+            <span className="text-xl font-bold text-white tracking-wide">
+              SPU
+            </span>
+          </div>
+          <img
+            src={logo}
+            alt="SPU Logo"
+            className="h-10 md:h-12 w-auto rounded-full object-contain"
+          />
+        </div>
 
-                {/* Desktop Menu */}
-                <ul className="hidden md:flex gap-8 list-none m-0 p-0">
-                    {navLinks.map((item) => {
-                        const isActive = location.pathname === item.path;
-                        return (
-                            <li key={item.name}>
-                                <Link
-                                    to={item.path}
-                                    className={`text-[0.95rem] font-medium transition-all duration-500 hover:text-purple-300 hover:underline underline-offset-4 ${isActive ? "text-purple-500 font-bold scale-110" : "text-[#a0a0a0]"
-                                        }`}
-                                >
-                                    {item.name}
-                                </Link>
-                            </li>
-                        );
-                    })}
-                </ul>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8 list-none m-0 p-0">
+          {navLinks.map((item) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  className={`text-[0.95rem] font-medium transition-all duration-500 hover:text-purple-300 hover:underline underline-offset-4 ${
+                    isActive
+                      ? "text-purple-500 font-bold scale-110"
+                      : "text-[#a0a0a0]"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
-                <div className="flex items-center gap-4">
-                    <button className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer">
-                        Register Now
-                    </button>
+        <div className="flex items-center gap-4">
+          <button className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer">
+            Register Now
+          </button>
 
-                    {/* Mobile Menu Button - Hamburger */}
-                    <button
-                        onClick={toggleMenu}
-                        className="md:hidden text-white focus:outline-none z-[60] relative p-1"
-                    >
-                        <div className="space-y-1.5 w-6">
-                            <span
-                                className={`block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-purple-500" : ""
-                                    }`}
-                            ></span>
-                            <span
-                                className={`block w-3/4 ml-auto h-0.5 bg-white transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : ""
-                                    }`}
-                            ></span>
-                            <span
-                                className={`block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-purple-500" : ""
-                                    }`}
-                            ></span>
-                        </div>
-                    </button>
-                </div>
-            </nav>
-
-            {/* Mobile Menu Backdrop */}
-            <div
-                className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-                    }`}
-                onClick={toggleMenu}
-            />
-
-            {/* Mobile Menu Glass Card - Parul Style */}
-            <div
-                className={`fixed top-24 left-1/2 -translate-x-1/2 z-[60] w-[90%] max-w-[400px] md:hidden transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? "translate-y-0 opacity-100 scale-100" : "translate-y-10 opacity-0 scale-95 pointer-events-none"
-                    }`}
-            >
-                <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0d0d12]/90 backdrop-blur-2xl shadow-2xl shadow-purple-900/20">
-
-                    {/* Header */}
-                    <div className="flex items-center justify-between px-6 py-5 border-b border-white/5 bg-white/5">
-                        <div className="flex items-center gap-3">
-                            <span className="text-white font-bold text-lg tracking-wider">
-                                SPU <span className="text-purple-500">HACKFEST</span>
-                            </span>
-                        </div>
-                        {/* Close button is handled by the hamburger above, but we can add an X here if needed. 
-                            The reference doesn't strictly have a second X if the hamburger turns into one. 
-                            But for clarity: */}
-                        <div className="w-6" />
-                    </div>
-
-                    {/* Links List */}
-                    <div className="p-6">
-                        <ul className="flex flex-col gap-6">
-                            {navLinks.map((item) => {
-                                const isActive = location.pathname === item.path;
-                                return (
-                                    <li key={item.name}>
-                                        <Link
-                                            to={item.path}
-                                            className={`block text-lg font-medium transition-colors ${isActive ? "text-white" : "text-gray-400 hover:text-gray-200"
-                                                }`}
-                                        >
-                                            {item.name}
-                                            {/* Active Underline Indicator */}
-                                            {isActive && (
-                                                <div className="h-[2px] w-full bg-purple-500 mt-1 shadow-[0_0_8px_#a855f7]" />
-                                            )}
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-
-                        {/* Register Button */}
-                        <div className="mt-8">
-                            <button className="w-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-purple-500/30 active:scale-95 transition-transform tracking-wide">
-                                Register Now
-                            </button>
-                            <p className="text-center text-gray-500 text-[10px] mt-4 uppercase tracking-[0.2em]">
-                                Join talented developers
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          {/* Mobile Menu Button - Hamburger */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden text-white focus:outline-none z-[60] relative p-1"
+          >
+            <div className="space-y-1.5 w-6">
+              <span
+                className={`block w-full h-0.5 bg-white transition-all duration-300 ${
+                  isMenuOpen ? "rotate-45 translate-y-2 bg-purple-500" : ""
+                }`}
+              ></span>
+              <span
+                className={`block w-3/4 ml-auto h-0.5 bg-white transition-opacity duration-300 ${
+                  isMenuOpen ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                className={`block w-full h-0.5 bg-white transition-all duration-300 ${
+                  isMenuOpen ? "-rotate-45 -translate-y-2 bg-purple-500" : ""
+                }`}
+              ></span>
             </div>
-        </>
-    );
+          </button>
+        </div>
+      </nav>
+      {/* 
+      {/* Mobile Menu Backdrop */}
+      <div
+        className={`fixed inset-0 bg-black/70 backdrop-blur-md z-[55] transition-opacity duration-300 md:hidden ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={toggleMenu}
+      />
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 z-[100] bg-black/40 backdrop-blur-md transition-all duration-300 md:hidden ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={toggleMenu}
+      >
+        <div
+          className={`w-[92%] mx-auto mt-6 flex flex-col gap-3 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+            isMenuOpen
+              ? "translate-y-0 opacity-100 scale-100"
+              : "-translate-y-12 opacity-0 scale-90 pointer-events-none"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* 1. Branding Bar - Glassmorphic */}
+          <div className="flex justify-between items-center bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full px-5 py-3 shadow-xl">
+            <div className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-8 w-8 object-contain rounded-full shadow-lg"
+              />
+              <div className="h-5 w-[1px] bg-white/20 mx-1"></div>
+              <div className="flex flex-col">
+                <span className="text-[11px] font-black text-white leading-none tracking-wider">
+                  SPU <span className="text-purple-500">HACKFEST</span>
+                </span>
+                <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">
+                  Innovation Hub
+                </span>
+              </div>
+            </div>
+
+            <button
+              onClick={toggleMenu}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-white transition-transform active:scale-90"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          {/* 2. Navigation Card - Transparent/Glass */}
+          <div className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-8 shadow-2xl relative overflow-hidden">
+            {/* Subtle purple radial glow to keep the theme feel */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-600/10 blur-[80px] rounded-full"></div>
+
+            <ul className="flex flex-col gap-7 list-none p-0 m-0 relative z-10">
+              {navLinks.map((item, index) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <li
+                    key={item.name}
+                    style={{ transitionDelay: `${index * 50}ms` }}
+                    className={`transition-all duration-500 ${
+                      isMenuOpen
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-4"
+                    }`}
+                  >
+                    <Link
+                      to={item.path}
+                      className={`text-2xl font-bold flex items-center gap-4 transition-all ${
+                        isActive
+                          ? "text-purple-500 translate-x-2"
+                          : "text-white/80 hover:text-white"
+                      }`}
+                      onClick={toggleMenu}
+                    >
+                      {item.name}
+                      {isActive && (
+                        <span className="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.8)]"></span>
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
+
+              {/* 3. Action Button - Keeping the solid theme color */}
+              <li
+                className={`mt-4 transition-all duration-700 delay-300 ${
+                  isMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+              >
+                <button className="w-full bg-[#9333ea] hover:bg-[#a855f7] text-white font-extrabold py-4.5 rounded-full text-lg shadow-[0_15px_30px_-5px_rgba(147,51,234,0.4)] active:scale-95 transition-all uppercase tracking-wider">
+                  Register Now
+                </button>
+              </li>
+            </ul>
+
+            <div className="flex justify-center gap-2 mt-10 opacity-20">
+              <div className="w-1 h-1 rounded-full bg-white"></div>
+              <div className="w-1 h-1 rounded-full bg-white"></div>
+              <div className="w-1 h-1 rounded-full bg-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Navbar;

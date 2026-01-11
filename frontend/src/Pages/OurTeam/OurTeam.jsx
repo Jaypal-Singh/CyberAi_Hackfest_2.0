@@ -2,65 +2,156 @@ import React from "react";
 import logo from "../../assets/hakathon_logo/logo.jpeg";
 import { GridBackground } from "../../Components/GridBackground/GridBackground";
 import "./OurTeam.css";
-import skdada from "../../assets/sponsors/spu.png";
+import psp from "../../assets/Team/psp.jpeg";
+import pmudani from "../../assets/Team/pmudani.jpeg";
+import pjpatel from "../../assets/Team/pjpatel.jpeg";
 
 // Add your team member data here
 const TEAM_DATA = {
-  "CORE TEAM": [
+  "Chief Patron": [
     {
       id: 1,
-      name: "SK DADA",
+      name: "Shri Prakashbhai S. Patel",
       role: "PRESIDENT",
-      image: skdada,
+      image: psp,
     },
+  ],
+  Patron: [
     {
       id: 2,
-      name: "YASHVARDHAN SINGH",
-      role: "VICE PRESIDENT",
-      image: "/path-to-image/yash.jpg",
+      name: "Prof. (Dr.) Prafulkumar Udani",
+      role: "Provost",
+      image: pmudani,
     },
+  ],
+  Chairperson: [
     {
       id: 3,
-      name: "SUMIT KUMAR",
-      role: "SECRETARY",
-      image: "/path-to-image/sumit.jpg",
-    },
-    {
-      id: 4,
-      name: "ADITYA SINGH",
-      role: "TREASURER",
-      image: "/path-to-image/aditya.jpg",
+      name: "Dr. P.J. Patel",
+      role: "Principal, SPCE",
+      image: pjpatel,
     },
   ],
-  "TECHNICAL TEAM": [
+  "CORE COMMITTEE": [
     {
-      id: 5,
-      name: "ANIKET PRASAD",
-      role: "TECHNICAL LEAD",
-      image: "/path-to-image/aniket.jpg",
+      id: 101,
+      name: "Dr. Ankur J. Goswami",
+      role: "CORE MEMBER",
+      image: "ankur_goswami",
     },
     {
-      id: 6,
-      name: "HARSHITA SINGH",
-      role: "WEB DEVELOPER",
-      image: "/path-to-image/harshita.jpg",
+      id: 102,
+      name: "Dr. Jigar A. Soni",
+      role: "CORE MEMBER",
+      image: "jigar_soni",
     },
   ],
-  "MANAGEMENT TEAM": [
+  "TECHNICAL COMMITTEE": [
     {
-      id: 7,
-      name: "RISHITA",
-      role: "EVENT MANAGER",
-      image: "/path-to-image/rishita.jpg",
-    },
-    {
-      id: 8,
-      name: "PRASHANT KUMAR",
+      id: 201,
+      name: "Prof. Mehul S. Patel (IT)",
       role: "COORDINATOR",
-      image: "/path-to-image/prashant.jpg",
+      image: "mehul_patel",
+    },
+    {
+      id: 202,
+      name: "Prof. Jayesh M. Mewada (CE)",
+      role: "COORDINATOR",
+      image: "jayesh_mewada",
+    },
+    {
+      id: 203,
+      name: "Bhavik Prajapati (ICT)",
+      role: "TECHNICAL MEMBER",
+      image: "bhavik_prajapati",
+    },
+    {
+      id: 204,
+      name: "Heena Patel (IT)",
+      role: "TECHNICAL MEMBER",
+      image: "heena_patel",
+    },
+    {
+      id: 205,
+      name: "Jitendra Darji (MCA)",
+      role: "TECHNICAL MEMBER",
+      image: "jitendra_darji",
+    },
+    {
+      id: 206,
+      name: "Prey Patel (AIDS)",
+      role: "TECHNICAL MEMBER",
+      image: "prey_patel",
+    },
+    {
+      id: 207,
+      name: "Rajan Patel (CSE)",
+      role: "TECHNICAL MEMBER",
+      image: "rajan_patel",
+    },
+    {
+      id: 208,
+      name: "Ravi Patel (CE)",
+      role: "TECHNICAL MEMBER",
+      image: "ravi_patel",
+    },
+    {
+      id: 209,
+      name: "Jignesh Patel (CE)",
+      role: "TECHNICAL MEMBER",
+      image: "jignesh_patel",
+    },
+    {
+      id: 210,
+      name: "Shailesh Patel (IT)",
+      role: "TECHNICAL MEMBER",
+      image: "shailesh_patel",
     },
   ],
-  // Add other sections like MEDIA, PUBLIC RELATIONS, etc.
+  "SPONSORSHIP & PUBLICITY": [
+    {
+      id: 301,
+      name: "Prof. Dixit Chaudhary",
+      role: "COORDINATOR",
+      image: "dixit_chaudhary",
+    },
+    {
+      id: 302,
+      name: "Prof. Prince C. Patel",
+      role: "COORDINATOR",
+      image: "prince_patel",
+    },
+  ],
+  "REGISTRATION & HOSPITALITY": [
+    {
+      id: 401,
+      name: "Prof. Shilpa D. Sherasiya",
+      role: "COORDINATOR",
+      image: "shilpa_sherasiya",
+    },
+    {
+      id: 402,
+      name: "Prof. Rupal Chaudhary",
+      role: "COORDINATOR",
+      image: "rupal_chaudhary",
+    },
+  ],
+  "DOCUMENTATION & RESOURCE": [
+    {
+      id: 501,
+      name: "Prof. Ekta K. Patel",
+      role: "COORDINATOR",
+      image: "ekta_patel",
+    },
+  ],
+  "JUDGING & EVALUATION": [
+    {
+      id: 601,
+      name: "Mr. Jigar Gajjar",
+      role: "COORDINATOR",
+      image: "jigar_gajjar",
+    },
+  ],
 };
 
 const TeamCard = ({ member }) => {
@@ -154,9 +245,14 @@ const OurTeam = () => {
             </div>
 
             {/* Grid for this specific section */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 w-full">
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-16 w-full">
               {members.map((member) => (
-                <TeamCard key={member.id} member={member} />
+                <div
+                  key={member.id}
+                  className="w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] max-w-[300px]"
+                >
+                  <TeamCard member={member} />
+                </div>
               ))}
             </div>
           </div>
