@@ -152,11 +152,10 @@ const CyberSponsorPage = () => {
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`px-8 py-2.5 rounded-full text-[10px] font-black tracking-[0.25em] transition-all duration-500 uppercase ${
-              activeTab === cat
+            className={`px-8 py-2.5 rounded-full text-[10px] font-black tracking-[0.25em] transition-all duration-500 uppercase ${activeTab === cat
                 ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-[0_0_30px_rgba(192,38,211,0.4)] scale-105"
                 : "text-white/40 hover:text-white"
-            }`}
+              }`}
           >
             {cat}
           </button>
