@@ -67,9 +67,14 @@ const Navbar = () => {
                 </ul>
 
                 <div className="flex items-center gap-4">
-                    <button className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer">
+                    <a
+                        href="https://unstop.com/p/cyberai-hackfest-20-sankalchand-patel-college-of-engineering-spce-visnagar-gujarat-1621737"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer text-center"
+                    >
                         Register Now
-                    </button>
+                    </a>
 
                     {/* Mobile Menu Button - Hamburger */}
                     <button
@@ -146,9 +151,14 @@ const Navbar = () => {
 
                         {/* Register Button */}
                         <div className="mt-8">
-                            <button className="w-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-purple-500/30 active:scale-95 transition-transform tracking-wide">
+                            <a
+                                href="https://unstop.com/p/cyberai-hackfest-20-sankalchand-patel-college-of-engineering-spce-visnagar-gujarat-1621737"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full text-center bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-purple-500/30 active:scale-95 transition-transform tracking-wide"
+                            >
                                 Register Now
-                            </button>
+                            </a>
                             <p className="text-center text-gray-500 text-[10px] mt-4 uppercase tracking-[0.2em]">
                                 Join talented developers
                             </p>
