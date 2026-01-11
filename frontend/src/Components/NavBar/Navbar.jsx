@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/hakathon_logo/logo.jpeg";
+import SPUlogo from "../../assets/sponsors/spu.png";
+
 import useSmoothScroll from "../../Hooks/useSmoothScroll";
 
 const Navbar = () => {
@@ -37,15 +39,17 @@ const Navbar = () => {
             <nav className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center bg-white/5 backdrop-blur-md px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[90%] max-w-[1200px] border border-white/10 shadow-lg transition-all">
                 <div className="flex items-center gap-3">
                     <div className="flex flex-col leading-none">
-                        <span className="text-xl font-bold text-white tracking-wide">
-                            SPU
-                        </span>
-                    </div>
-                    <img
-                        src={logo}
+                        <img
+                        src={SPUlogo}
                         alt="SPU Logo"
                         className="h-10 md:h-12 w-auto rounded-full object-contain"
                     />
+                    </div>
+                    {/* <img
+                        src={logo}
+                        alt="SPU Logo"
+                        className="h-10 md:h-12 w-auto rounded-full object-contain"
+                    /> */}
                 </div>
 
                 {/* Desktop Menu */}
