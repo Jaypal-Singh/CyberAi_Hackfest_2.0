@@ -171,7 +171,7 @@ const EventHighlights = () => {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto">
         <HoverEffect items={highlights} />
       </div>
     </section>
