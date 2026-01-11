@@ -4,10 +4,10 @@ import logo from "../../assets/hakathon_logo/logo.jpeg";
 import useSmoothScroll from "../../Hooks/useSmoothScroll";
 
 const Navbar = () => {
-  const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     // Close menu when route changes
     React.useEffect(() => {
@@ -66,10 +66,10 @@ const Navbar = () => {
                     })}
                 </ul>
 
-        <div className="flex items-center gap-4">
-          <button className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer">
-            Register Now
-          </button>
+                <div className="flex items-center gap-4">
+                    <button className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer">
+                        Register Now
+                    </button>
 
                     {/* Mobile Menu Button - Hamburger */}
                     <button
