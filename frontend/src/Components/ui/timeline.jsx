@@ -43,9 +43,17 @@ export const Timeline = ({
                         <div
                             className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                             <div
-                                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                                <div
-                                    className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+                                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
+                                <motion.div
+                                    whileInView={{
+                                        backgroundColor: "#a855f7",
+                                        borderColor: "#d8b4fe",
+                                        boxShadow: "0 0 20px rgba(168, 85, 247, 0.8), 0 0 10px rgba(168, 85, 247, 0.5)"
+                                    }}
+                                    viewport={{ once: true, margin: "-20%" }}
+                                    transition={{ duration: 0.4 }}
+                                    className="h-4 w-4 rounded-full bg-neutral-800 border border-neutral-700 p-2"
+                                />
                             </div>
                             <h3
                                 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 ">

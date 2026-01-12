@@ -21,21 +21,27 @@ const ProblemStatements = () => {
             problems: [
                 {
                     id: 1,
-                    title: "AI-Powered Healthcare Diagnostics",
-                    description: "Develop a system that uses computer vision and deep learning to analyse medical images (X-rays, MRIs) for early detection of diseases.",
-                    outcome: "A web/mobile app providing preliminary diagnostic reports to assist doctors."
+                    title: "Intelligent Automation Systems",
+                    description: "Develop an AI-driven system to automate repetitive tasks in industries or daily life, improving efficiency and reducing human error.",
+                    outcome: "A functional prototype demonstrating automated workflow processing."
                 },
                 {
                     id: 2,
-                    title: "Personalized Learning Assistant",
-                    description: "Create an adaptive learning platform that analyzes student performance and recommends personalized study paths and resources.",
-                    outcome: "An AI tutor that adapts to the user's learning pace and style."
+                    title: "AI for Healthcare, Agriculture, and Education",
+                    description: "Create varied AI solutions addressing key challenges: disease diagnosis aid, crop yield prediction, or personalized learning assistants.",
+                    outcome: "An impactful AI application tailored for a specific sector (Healthcare, Agri, or Edu)."
                 },
                 {
                     id: 3,
-                    title: "Predictive Maintenance for Industry",
-                    description: "Build a model to predict equipment failures in manufacturing plants using sensor data to minimize downtime.",
-                    outcome: "A dashboard showing health status and failure probability of machinery."
+                    title: "Computer Vision & NLP Applications",
+                    description: "Build an application utilizing Computer Vision for object detection or NLP for language processing tasks like translation or sentiment analysis.",
+                    outcome: "A real-time vision or language processing application."
+                },
+                {
+                    id: 4,
+                    title: "AI-based Predictive Analytics",
+                    description: "Design a model that uses historical data to predict future trends, such as stock market movements, weather patterns, or sales forecasting.",
+                    outcome: "A predictive dashboard visualizing data trends and future forecasts."
                 }
             ]
         },
@@ -46,21 +52,27 @@ const ProblemStatements = () => {
             problems: [
                 {
                     id: 1,
-                    title: "Phishing Detection System",
-                    description: "Develop a browser extension or application that identifies and blocks phishing websites and emails in real-time.",
-                    outcome: "A tool that alerts users about potential phishing attempts with high accuracy."
+                    title: "Secure Authentication Systems",
+                    description: "Develop a robust multi-factor authentication system or biometric security solution to prevent unauthorized access.",
+                    outcome: "A secure login module with advanced authentication features."
                 },
                 {
                     id: 2,
-                    title: "Blockchain-based Identity Management",
-                    description: "Create a decentralized identity management system to give users control over their personal data and prevent identity theft.",
-                    outcome: "A secure ID wallet app powered by blockchain."
+                    title: "Threat Detection and Prevention",
+                    description: "Create a system that monitors network traffic or system logs to detect and block malicious activities or intrusions in real-time.",
+                    outcome: "An intrusion detection system (IDS) dashboard."
                 },
                 {
                     id: 3,
-                    title: "Network Intrusion Detection",
-                    description: "Build an ML-based system to detect anomalies and potential intrusions in a network traffic log.",
-                    outcome: "A monitoring dashboard alerting admins of suspicious activities."
+                    title: "Blockchain and Cryptographic Applications",
+                    description: "Implement a decentralized application (DApp) or secure data storage solution using blockchain technology to ensure data integrity.",
+                    outcome: "A functional blockchain-based prototype for data security."
+                },
+                {
+                    id: 4,
+                    title: "Cybercrime Analysis and Digital Forensics",
+                    description: "Build a tool to assist in digital forensic investigations, such as file recovery, metadata analysis, or evidence tracking.",
+                    outcome: "A digital forensics toolkit or reporting application."
                 }
             ]
         },
@@ -71,15 +83,21 @@ const ProblemStatements = () => {
             problems: [
                 {
                     id: 1,
-                    title: "Smart Waste Management System",
-                    description: "Design an IoT-enabled waste management system that optimizes garbage collection routes based on bin fill levels.",
-                    outcome: "A system reducing fuel consumption and improving city cleanliness."
+                    title: "Smart Cities and IoT Solutions",
+                    description: "Design an IoT-based solution for smart city management, such as smart parking, waste management, or intelligent street lighting.",
+                    outcome: "A prototype managing a specific smart city component."
                 },
                 {
                     id: 2,
-                    title: "Renewable Energy Monitoring",
-                    description: "Create a platform to monitor and optimize the performance of solar panels or wind turbines for residential users.",
-                    outcome: "An app tracking energy generation and suggesting efficiency improvements."
+                    title: "Energy-efficient and Green Technologies",
+                    description: "Develop a system to monitor and optimize energy consumption in buildings or industrial processes to reduce carbon footprint.",
+                    outcome: "An energy monitoring and optimization dashboard."
+                },
+                {
+                    id: 3,
+                    title: "Waste Management and Sustainability Solutions",
+                    description: "Create a solution for efficient waste segregation, recycling, or tracking to promote environmental sustainability.",
+                    outcome: "A smart waste management system or tracking app."
                 }
             ]
         },
@@ -90,61 +108,21 @@ const ProblemStatements = () => {
             problems: [
                 {
                     id: 1,
-                    title: "Digital Twin for Assembly Line",
-                    description: "Create a digital twin simulation of a manufacturing assembly line to optimize workflow and detect bottlenecks.",
-                    outcome: "A visual simulation dashboard for process optimization."
-                }
-            ]
-        },
-        'big-data': {
-            title: "Big Data",
-            description: "Handle widespread data sets to extract meaningful insights.",
-            color: "#3b82f6",
-            problems: [
+                    title: "Robotics and Automation",
+                    description: "Design and simulate a robotic system for industrial automation, performing tasks like assembly, pick-and-place, or quality inspection.",
+                    outcome: "A simulation or prototype of an industrial robot automation."
+                },
                 {
-                    id: 1,
-                    title: "Real-time Traffic Analysis",
-                    description: "Analyze real-time traffic data to optimize traffic light timings and reduce congestion in smart cities.",
-                    outcome: "A system that adjusts traffic signals dynamically based on flow."
-                }
-            ]
-        },
-        'cloud-computing': {
-            title: "Cloud Computing",
-            description: "Scalable and on-demand computing resources.",
-            color: "#0ea5e9",
-            problems: [
+                    id: 2,
+                    title: "Cloud, Edge, and Quantum Computing Concepts",
+                    description: "Develop a solution leveraging cloud or edge computing for real-time data processing, or explore quantum algorithms.",
+                    outcome: "An application demonstrating distributed computing or quantum concepts."
+                },
                 {
-                    id: 1,
-                    title: "Serverless Microservices Orchestrator",
-                    description: "Build a tool to visualize and manage serverless function deployments across multiple cloud providers.",
-                    outcome: "A dashboard for managing serverless infrastructure cost and performance."
-                }
-            ]
-        },
-        'iot': {
-            title: "IoT (Internet of Things)",
-            description: "Connect physical devices to the internet for smart automation.",
-            color: "#22c55e",
-            problems: [
-                {
-                    id: 1,
-                    title: "Smart Agriculture System",
-                    description: "Develop an IoT system for monitoring soil moisture and automating irrigation for farmers.",
-                    outcome: "A mobile app controlling irrigation valves based on sensor data."
-                }
-            ]
-        },
-        'blockchain': {
-            title: "Blockchain",
-            description: "Decentralized and secure transactional systems.",
-            color: "#f59e0b",
-            problems: [
-                {
-                    id: 1,
-                    title: "Supply Chain Transparency",
-                    description: "Implement a blockchain solution to track the journey of products from manufacturer to consumer to ensure authenticity.",
-                    outcome: "A dApp allowing consumers to scan QR codes and view product history."
+                    id: 3,
+                    title: "AIoT and Digital Twins",
+                    description: "Combine AI with IoT to create smart connected devices, or build a digital twin for real-time monitoring and simulation of physical assets.",
+                    outcome: "An AIoT system or detailed digital twin visualization."
                 }
             ]
         }

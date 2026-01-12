@@ -69,7 +69,7 @@ const Timeline = () => {
       ),
     },
     {
-      title: "18th Jan - 4:00 PM",
+      title: "18th Mar - 4:00 PM",
       content: (
         <div>
           <h4 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-2">
