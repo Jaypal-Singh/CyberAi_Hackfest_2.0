@@ -32,8 +32,8 @@ const Navbar = () => {
         { name: "Our Team", path: "/ourteam" },
         { name: "Gallery", path: "/gallery" },
         { name: "Contacts", path: "/contacts" },
-        { name: "Contacts", path: "/contacts" },
-        
+        // { name: "Contacts", path: "/contacts" },
+
     ];
 
     return (
@@ -75,14 +75,12 @@ const Navbar = () => {
                 </ul>
 
                 <div className="flex items-center gap-4">
-                    <a
-                        href="https://unstop.com/p/cyberai-hackfest-20-sankalchand-patel-college-of-engineering-spce-visnagar-gujarat-1621737"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link
+                        to="/register"
                         className="hidden md:block bg-gradient-to-r from-purple-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-purple-500/30 text-sm md:text-base cursor-pointer text-center"
                     >
                         Register Now
-                    </a>
+                    </Link>
 
                     {/* Mobile Menu Button - Hamburger */}
                     <button
@@ -207,14 +205,13 @@ const Navbar = () => {
                                     : "opacity-0 translate-y-4"
                                     }`}
                             >
-                                <a
-                                    href="https://unstop.com/p/cyberai-hackfest-20-sankalchand-patel-college-of-engineering-spce-visnagar-gujarat-1621737"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <Link
+                                    to="/register"
+                                    onClick={toggleMenu}
                                     className="block w-full text-center bg-[#9333ea] hover:bg-[#a855f7] text-white font-extrabold py-4.5 rounded-full text-lg shadow-[0_15px_30px_-5px_rgba(147,51,234,0.4)] active:scale-95 transition-all uppercase tracking-wider"
                                 >
                                     Register Now
-                                </a>
+                                </Link>
                             </li>
                         </ul>
 

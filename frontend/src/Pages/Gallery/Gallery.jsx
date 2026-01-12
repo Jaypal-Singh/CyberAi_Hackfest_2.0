@@ -33,17 +33,68 @@ const GALLERY_IMAGES = [
 ];
 
 
-const Localexcur = [
-  { id: 1, src: AdalajNiVav, title: "Adalaj Ni Vav" },
-  { id: 2, src: AithorGaneshTemple, title: "Aithor Ganesh Temple" },
-  { id: 3, src: DandiKutir, title: "Dandi Kutir Museum" },
-  { id: 4, src: ModheraSunTemple, title: "Modhera Sun Temple" },
-  { id: 5, src: PatanKaPatola, title: "Patan Ka Patola" },
-  { id: 6, src: SabarmatiAshram, title: "Sabarmati Ashram" },
-  { id: 7, src: SiddiSayedMosque, title: "Siddi Sayed Mosque" },
-  { id: 8, src: KirtiToren, title: "Kirti Toren" },
 
+const Localexcur = [
+  { id: 1, src: AdalajNiVav, title: "Adalaj Ni Vav", url: "https://en.wikipedia.org/wiki/Adalaj_Stepwell" },
+  { id: 2, src: AithorGaneshTemple, title: "Aithor Ganesh Temple", url: "https://en.wikipedia.org/wiki/Aithor" },
+  { id: 3, src: DandiKutir, title: "Dandi Kutir Museum", url: "https://en.wikipedia.org/wiki/Dandi_Kutir" },
+  { id: 4, src: ModheraSunTemple, title: "Modhera Sun Temple", url: "https://en.wikipedia.org/wiki/Sun_Temple,_Modhera" },
+  { id: 5, src: PatanKaPatola, title: "Patan Ka Patola", url: "https://en.wikipedia.org/wiki/Patola_sari" },
+  { id: 6, src: SabarmatiAshram, title: "Sabarmati Ashram", url: "https://en.wikipedia.org/wiki/Sabarmati_Ashram" },
+  { id: 7, src: SiddiSayedMosque, title: "Siddi Sayed Mosque", url: "https://en.wikipedia.org/wiki/Sidi_Saiyyed_Mosque" },
+  { id: 8, src: KirtiToren, title: "Kirti Toren", url: "https://en.wikipedia.org/wiki/Kirti_Toran" },
 ];
+
+// SponsorCard-style component for Local Excursions
+const ExcursionCard = ({ item }) => {
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col items-center [perspective:1000px] cursor-pointer w-full"
+    >
+      <div className="absolute -top-12 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform group-hover:-translate-y-2 z-30 pointer-events-none">
+        <div className="bg-black/90 border border-purple-500 text-purple-500 px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] flex items-center gap-2 backdrop-blur-md shadow-[0_0_20px_rgba(217,70,239,0.4)]">
+          VIEW WIKIPEDIA <span className="text-xs">↗</span>
+        </div>
+        <div className="absolute left-1/2 top-full w-[1px] h-10 bg-gradient-to-b from-purple-500 via-purple-500/50 to-transparent -translate-x-1/2"></div>
+      </div>
+
+      <div
+        className="relative w-full aspect-[4/3] bg-[#0d0d15] border border-purple-500/10 rounded-xl flex items-center justify-center p-3 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
+                      group-hover:border-fuchsia-500/40 group-hover:shadow-[0_25px_60px_rgba(217,70,239,0.2)]
+                      transform-gpu group-hover:[transform:rotateX(30deg)_translateY(-5px)] overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#d946ef 1px, transparent 1px)",
+            backgroundSize: "10px 10px",
+          }}
+        ></div>
+
+        <div className="relative w-full h-full rounded-lg overflow-hidden">
+          <img
+            src={item.src}
+            alt={item.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          {/* Title Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80"></div>
+          <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 flex items-center justify-center">
+            <h3 className="text-lg md:text-xl font-bold text-white text-center font-[oswald] tracking-wider drop-shadow-lg leading-tight uppercase relative z-10">
+              {item.title}
+            </h3>
+          </div>
+        </div>
+
+        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-purple-500/20 blur-[30px] rounded-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+      </div>
+    </a>
+  );
+};
+
 
 const GalleryCard = ({ image }) => {
   return (
@@ -89,7 +140,7 @@ const Gallery = () => {
         <div className="flex items-center gap-6">
           <img
             src={logo}
-            alt="Ingenium 2026"
+            alt="CyberAi hackfest 2.0"
             className="h-[190px] object-contain mb-2  rounded-xl p-2"
           />
         </div>
@@ -129,7 +180,7 @@ const Gallery = () => {
       {/* Gallery Grid */}
       <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {Localexcur.map((img) => (
-          <GalleryCard key={img.id} image={img} />
+          <ExcursionCard key={img.id} item={img} />
         ))}
       </div>
 

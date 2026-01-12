@@ -63,10 +63,8 @@ const AboutUs = () => {
   return (
     <section className="about-container" id="about">
       <div className="about-content">
-        <div className="hidden md:block w-full text-left mb-10">
-          <p className="text-purple-400 text-lg uppercase underline tracking-wider">
-            About Us
-          </p>
+        <div className="w-full text-center mb-10">
+          <h2 className="highlights-title">About Us</h2>
         </div>
 
         {/* Left Side - Logo */}

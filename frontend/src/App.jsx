@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 
 import ProblemStatements from './Pages/Home/HackathonTracks/ProblemStatements'
+import Register from './Pages/Register/Register'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/ourteam" element={<OurTeam />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contacts" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/tracks/:trackId" element={<ProblemStatements />} />
         </Routes>
         <Footer />

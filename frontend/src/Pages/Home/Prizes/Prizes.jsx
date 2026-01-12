@@ -30,7 +30,7 @@ const Prizes = () => {
                 />
               </svg>
               <span className="prize-rank">2nd Prize</span>
-              <span className="prize-amount">₹50,000</span>
+              <span className="prize-amount">₹5X,XXX</span>
             </div>
 
             {/* 1st Prize */}
@@ -48,7 +48,7 @@ const Prizes = () => {
                 />
               </svg>
               <span className="prize-rank">1st Prize</span>
-              <span className="prize-amount">₹1,00,000</span>
+              <span className="prize-amount">₹1,XX,XXX</span>
             </div>
 
             {/* 3rd Prize */}
@@ -66,14 +66,14 @@ const Prizes = () => {
                 />
               </svg>
               <span className="prize-rank">3rd Prize</span>
-              <span className="prize-amount">₹25,000</span>
+              <span className="prize-amount">₹25,XXX</span>
             </div>
           </div>
 
           <div className="consolation-section">
             <h4 className="consolation-title">Consolation Prizes</h4>
             <p className="consolation-amount">
-              Special category awards(25 K) Or 5000/- to 5-Groups
+              Special category awards(25XXX) Or 5XXX/- to 5-Groups
             </p>
             <p className="consolation-amount">Goodies by Techdefence</p>
           </div>
