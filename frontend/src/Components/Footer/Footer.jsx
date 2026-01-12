@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
+import logo from "../../assets/hakathon_logo/logo.jpeg"
 
 const Footer = () => {
   return (
@@ -10,24 +11,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-6 relative group">
               {/* Gear Icon with 2026 */}
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                className="w-32 h-32 text-white group-hover:text-purple-400 transition-colors duration-300"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
+              <img src={logo} className="h-50 w-50"></img>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-8 md:mt-10 mr-4">
                 <span className="text-2xl font-bold text-purple-500">2026</span>
               </div>
@@ -73,12 +57,25 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6 text-white">Contact Us</h3>
             <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left">
               <div className="flex items-center gap-4 group">
-                <div className="p-2 rounded-full bg-purple-900/20 group-hover:bg-purple-900/40 transition-colors mt-1">
-                  <MapPin className="w-5 h-5 text-purple-400" />
-                </div>
-                <div className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm">
-                  <p>Sankalchand Patel University,Visnagar,Gujarat</p>
-                </div>
+                <a
+                  href="https://www.google.com/maps/place/Sankalchand+Patel+University+(SPU)/@23.6849003,72.5445244,17z/data=!3m1!4b1!4m6!3m5!1s0x395c4fc1a82d9cc1:0xab14b55faa92b2c6!8m2!3d23.6849003!4d72.5470993!16s%2Fg%2F11fzd2qcxp?authuser=0&entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 group cursor-pointer decoration-none"
+                >
+                  {/* Icon Container */}
+                  <div className="p-2 rounded-full bg-purple-900/20 group-hover:bg-purple-900/40 transition-colors mt-1">
+                    <MapPin className="w-5 h-5 text-purple-400" />
+                  </div>
+
+                  {/* Text Container */}
+                  <div className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm">
+                    <p className="leading-relaxed">
+                      Sankalchand Patel University,<br />
+                      Visnagar, Gujarat
+                    </p>
+                  </div>
+                </a>
               </div>
 
               <div className="flex items-center gap-4 group">
@@ -86,12 +83,13 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-purple-400" />
                 </div>
                 <a
-                  href="mailto:ingenium@ahduni.edu.in"
+                  href="mailto:jaypalsinghchouhan2008@gmail.com"
                   className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
                 >
                   spu.ac.in
                 </a>
               </div>
+
 
               <div className="flex gap-4 mt-2">
                 <a
