@@ -14,7 +14,7 @@ const TEAM_DATA = {
   Patron: [
     {
       id: 2,
-      name: "Prof. (Dr.) Prafulkumar Udani",
+      name: "Prof. (Dr.) P. M. Udani",
       role: "Provost",
       image: pmudani,
     },
@@ -36,7 +36,7 @@ const TEAM_DATA = {
   ],
   "organising committee": [
     { id: 201, name: "Prof. Mehul S. Patel", role: "Technical COORDINATOR" },
-    { id: 202, name: "Prof. Jayesh M. Mewada", role: "Technical COORDINATOR" },
+    { id: 202, name: "Prof. Jayesh M. Mevada", role: "Technical COORDINATOR" },
     {
       id: 203,
       name: "Prof. Rupal Chaudhary",
@@ -69,7 +69,7 @@ const TEAM_DATA = {
     },
     {
       id: 207,
-      name: "Prof. Ekta K. Patel",
+      name: "Prof. Ekta V. Patel",
       role: "Documentation & Resource Management COORDINATOR",
     },
   ],
@@ -89,7 +89,7 @@ const TEAM_DATA = {
     {
       id: 301,
       name: "Dr. K. J. Modi",
-      role: "Pro CE/IT",
+      role: "Prof CE/IT",
       image: dummy,
     },
     {
