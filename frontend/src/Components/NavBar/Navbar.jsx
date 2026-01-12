@@ -32,18 +32,20 @@ const Navbar = () => {
         { name: "Our Team", path: "/ourteam" },
         { name: "Gallery", path: "/gallery" },
         { name: "Contacts", path: "/contacts" },
+        { name: "Contacts", path: "/contacts" },
+        
     ];
 
     return (
         <>
-            <nav className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center bg-white/5 backdrop-blur-md px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[90%] max-w-[1200px] border border-white/10 shadow-lg transition-all">
+            <nav className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center bg-white backdrop-blur-md px-6 py-2 md:px-10 md:py-1.5 rounded-full mx-auto w-[95%] md:w-[92%] max-w-[1210px] border border-white/10 shadow-lg transition-all">
                 <div className="flex items-center gap-3">
                     <div className="flex flex-col leading-none">
                         <img
-                        src={SPUlogo}
-                        alt="SPU Logo"
-                        className="h-10 md:h-12 w-auto rounded-full object-contain"
-                    />
+                            src={SPUlogo}
+                            alt="SPU Logo"
+                            className="h-10 md:h-12 w-auto rounded-full object-contain"
+                        />
                     </div>
                     {/* <img
                         src={logo}
@@ -53,16 +55,16 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex gap-8 list-none m-0 p-0">
+                <ul className="hidden md:flex gap-6 list-none m-0 p-0">
                     {navLinks.map((item) => {
                         const isActive = location.pathname === item.path;
                         return (
                             <li key={item.name}>
                                 <Link
                                     to={item.path}
-                                    className={`text-[0.95rem] font-medium transition-all duration-500 hover:text-purple-300 hover:underline underline-offset-4 ${isActive
-                                            ? "text-purple-500 font-bold scale-110"
-                                            : "text-[#a0a0a0]"
+                                    className={`text-[0.95rem] font-medium transition-all duration-500 text-black hover:text-purple-300 hover:underline underline-offset-4 ${isActive
+                                        ? "text-purple-500 font-bold scale-110"
+                                        : "text-[#a0a0a0]"
                                         }`}
                                 >
                                     {item.name}
@@ -85,19 +87,19 @@ const Navbar = () => {
                     {/* Mobile Menu Button - Hamburger */}
                     <button
                         onClick={toggleMenu}
-                        className="md:hidden text-white focus:outline-none z-[60] relative p-1"
+                        className="md:hidden text-black focus:outline-none z-[60] relative p-1"
                     >
                         <div className="space-y-1.5 w-6">
                             <span
-                                className={`block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-purple-500" : ""
+                                className={`block w-full h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-purple-500" : ""
                                     }`}
                             ></span>
                             <span
-                                className={`block w-3/4 ml-auto h-0.5 bg-white transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : ""
+                                className={`block w-3/4 ml-auto h-0.5 bg-black transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : ""
                                     }`}
                             ></span>
                             <span
-                                className={`block w-full h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-purple-500" : ""
+                                className={`block w-full h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-purple-500" : ""
                                     }`}
                             ></span>
                         </div>
@@ -120,33 +122,33 @@ const Navbar = () => {
             >
                 <div
                     className={`w-[92%] mx-auto mt-6 flex flex-col gap-3 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isMenuOpen
-                            ? "translate-y-0 opacity-100 scale-100"
-                            : "-translate-y-12 opacity-0 scale-90 pointer-events-none"
+                        ? "translate-y-0 opacity-100 scale-100"
+                        : "-translate-y-12 opacity-0 scale-90 pointer-events-none"
                         }`}
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* 1. Branding Bar - Glassmorphic */}
-                    <div className="flex justify-between items-center bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full px-5 py-3 shadow-xl">
+                    <div className="flex justify-between items-center bg-white backdrop-blur-2xl border border-gray-200 rounded-full px-5 py-3 shadow-xl">
                         <div className="flex items-center gap-3">
                             <img
-                                src={logo}
+                                src={SPUlogo}
                                 alt="Logo"
-                                className="h-8 w-8 object-contain rounded-full shadow-lg"
+                                className="h-16 w-auto object-contain"
                             />
-                            <div className="h-5 w-[1px] bg-white/20 mx-1"></div>
-                            <div className="flex flex-col">
-                                <span className="text-[11px] font-black text-white leading-none tracking-wider">
+                            <div className="h-5 w-[1px] bg-black/20 mx-1"></div>
+                            {/* <div className="flex flex-col">
+                                <span className="text-[11px] font-black text-black leading-none tracking-wider">
                                     SPU <span className="text-purple-500">HACKFEST</span>
                                 </span>
-                                <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">
+                                <span className="text-[8px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">
                                     Innovation Hub
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
 
                         <button
                             onClick={toggleMenu}
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/10 text-white transition-transform active:scale-90"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 border border-gray-200 text-black transition-transform active:scale-90"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -177,15 +179,15 @@ const Navbar = () => {
                                         key={item.name}
                                         style={{ transitionDelay: `${index * 50}ms` }}
                                         className={`transition-all duration-500 ${isMenuOpen
-                                                ? "opacity-100 translate-x-0"
-                                                : "opacity-0 -translate-x-4"
+                                            ? "opacity-100 translate-x-0"
+                                            : "opacity-0 -translate-x-4"
                                             }`}
                                     >
                                         <Link
                                             to={item.path}
                                             className={`text-2xl font-bold flex items-center gap-4 transition-all ${isActive
-                                                    ? "text-purple-500 translate-x-2"
-                                                    : "text-white/80 hover:text-white"
+                                                ? "text-purple-500 translate-x-2"
+                                                : "text-gray-600 hover:text-black"
                                                 }`}
                                             onClick={toggleMenu}
                                         >
@@ -201,8 +203,8 @@ const Navbar = () => {
                             {/* 3. Action Button - Keeping the solid theme color */}
                             <li
                                 className={`mt-4 transition-all duration-700 delay-300 ${isMenuOpen
-                                        ? "opacity-100 translate-y-0"
-                                        : "opacity-0 translate-y-4"
+                                    ? "opacity-100 translate-y-0"
+                                    : "opacity-0 translate-y-4"
                                     }`}
                             >
                                 <a

@@ -3,17 +3,46 @@ import logo from "../../assets/hakathon_logo/logo.jpeg";
 import { GridBackground } from "../../Components/GridBackground/GridBackground";
 import skdada from "../../assets/sponsors/spu.png";
 
+
+import AdalajNiVav from "../../assets/Local_excursions/Adalaj_ni_vav.png";
+import AithorGaneshTemple from "../../assets/Local_excursions/Aithor_ganesh_temple.png";
+import DandiKutir from "../../assets/Local_excursions/Dandi_kutir_museum.png";
+import ModheraSunTemple from "../../assets/Local_excursions/Modhera_Sun_Temple.png";
+import PatanKaPatola from "../../assets/Local_excursions/Patan_ka_patola.png";
+import SabarmatiAshram from "../../assets/Local_excursions/Sabarmati Ashram.png";
+import SiddiSayedMosque from "../../assets/Local_excursions/Siddi_Sayed_Mosque.png";
+import KirtiToren from "../../assets/Local_excursions/Kirti_toren.png";
+
+import Convocations from "../../assets/Gallery_IMG/7th_Convocations.png";
+import play from "../../assets/Gallery_IMG/play.png";
+import Dummy from "../../assets/Gallery_IMG/Dummy.png";
+
+
+
 // Empty array for your 9 images
 const GALLERY_IMAGES = [
-  { id: 1, src: skdada, title: "Event 01" },
-  { id: 2, src: "https://via.placeholder.com/600x400", title: "Event 02" },
-  { id: 3, src: "https://via.placeholder.com/600x400", title: "Event 03" },
-  { id: 4, src: "https://via.placeholder.com/600x400", title: "Event 04" },
-  { id: 5, src: "https://via.placeholder.com/600x400", title: "Event 05" },
-  { id: 6, src: "https://via.placeholder.com/600x400", title: "Event 06" },
-  { id: 7, src: "https://via.placeholder.com/600x400", title: "Event 07" },
-  { id: 8, src: "https://via.placeholder.com/600x400", title: "Event 08" },
-  { id: 9, src: "https://via.placeholder.com/600x400", title: "Event 09" },
+  { id: 1, src: Convocations, title: "7th Convocations" },
+  { id: 2, src: play, title: "Play" },
+  { id: 3, src: Dummy, title: "Dummy" },
+  { id: 4, src: Dummy, title: "Dummy" },
+  { id: 5, src: Dummy, title: "Dummy" },
+  { id: 6, src: Dummy, title: "Dummy" },
+  { id: 7, src: Dummy, title: "Dummy" },
+  { id: 8, src: Dummy, title: "Dummy" },
+  { id: 9, src: Dummy, title: "Dummy" },
+];
+
+
+const Localexcur = [
+  { id: 1, src: AdalajNiVav, title: "Adalaj Ni Vav" },
+  { id: 2, src: AithorGaneshTemple, title: "Aithor Ganesh Temple" },
+  { id: 3, src: DandiKutir, title: "Dandi Kutir Museum" },
+  { id: 4, src: ModheraSunTemple, title: "Modhera Sun Temple" },
+  { id: 5, src: PatanKaPatola, title: "Patan Ka Patola" },
+  { id: 6, src: SabarmatiAshram, title: "Sabarmati Ashram" },
+  { id: 7, src: SiddiSayedMosque, title: "Siddi Sayed Mosque" },
+  { id: 8, src: KirtiToren, title: "Kirti Toren" },
+
 ];
 
 const GalleryCard = ({ image }) => {
@@ -81,6 +110,25 @@ const Gallery = () => {
       {/* Gallery Grid */}
       <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {GALLERY_IMAGES.map((img) => (
+          <GalleryCard key={img.id} image={img} />
+        ))}
+      </div>
+
+
+      <div className="relative z-10 mb-20 text-center mt-30">
+        <h2 className="text-4xl md:text-7xl font-bold tracking-[0.3em] text-white uppercase font-[oswald]">
+          Local Excursions
+        </h2>
+        <div className="flex items-center justify-center gap-4 mt-6">
+          <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+          <div className="w-2 h-2 rotate-45 bg-purple-500 shadow-[0_0_15px_#d946ef]"></div>
+          <div className="h-[2px] w-24 bg-gradient-to-l from-transparent via-purple-500 to-transparent"></div>
+        </div>
+      </div>
+
+      {/* Gallery Grid */}
+      <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {Localexcur.map((img) => (
           <GalleryCard key={img.id} image={img} />
         ))}
       </div>
