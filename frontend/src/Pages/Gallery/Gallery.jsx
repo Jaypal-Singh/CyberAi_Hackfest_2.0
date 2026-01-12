@@ -15,7 +15,7 @@ import KirtiToren from "../../assets/Local_excursions/Kirti_toren.png";
 
 import Convocations from "../../assets/Gallery_IMG/7th_Convocations.png";
 import play from "../../assets/Gallery_IMG/play.png";
-import Dummy from "../../assets/Gallery_IMG/Dummy.png";
+import Dummy from "../../assets/Gallery_IMG/dummy.png";
 
 
 
