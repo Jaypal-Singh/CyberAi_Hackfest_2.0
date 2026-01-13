@@ -66,14 +66,14 @@ const Prizes = () => {
                 />
               </svg>
               <span className="prize-rank">3rd Prize</span>
-              <span className="prize-amount">₹25,XXX</span>
+              <span className="prize-amount">₹2X,XXX</span>
             </div>
           </div>
 
           <div className="consolation-section">
             <h4 className="consolation-title">Consolation Prizes</h4>
             <p className="consolation-amount">
-              Special category awards(25XXX) Or 5XXX/- to 5-Groups
+              Special category awards(2XXXX) Or 5XXX/- to 5-Groups
             </p>
             <p className="consolation-amount">Goodies by Techdefence</p>
           </div>

@@ -100,9 +100,9 @@ export const InfiniteMovingCards = ({
                                     <div className="bg-white p-4 rounded-xl mb-4 w-full flex items-center justify-center h-32 overflow-hidden">
                                         <img src={item.image} alt={item.name} className="h-full w-full object-contain transform hover:scale-110 transition-transform duration-500" />
                                     </div>
-                                    <span className=" text-lg font-bold leading-[1.6] text-white tracking-wide text-center block">
+                                    {/* <span className=" text-lg font-bold leading-[1.6] text-white tracking-wide text-center block">
                                         {item.name}
-                                    </span>
+                                    </span> */}
                                 </div>
                             ) : (
                                 <>
@@ -114,9 +114,9 @@ export const InfiniteMovingCards = ({
                                             <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
                                                 {item.name}
                                             </span>
-                                            <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                                            {/* <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
                                                 {item.title}
-                                            </span>
+                                            </span> */}
                                         </span>
                                     </div>
                                 </>
