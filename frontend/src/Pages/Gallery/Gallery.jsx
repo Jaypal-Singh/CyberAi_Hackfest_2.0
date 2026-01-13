@@ -3,46 +3,87 @@ import logo from "../../assets/hakathon_logo/logo.jpeg";
 import { GridBackground } from "../../Components/GridBackground/GridBackground";
 import skdada from "../../assets/sponsors/spu.png";
 
-
 import AdalajNiVav from "../../assets/Local_excursions/Adalaj_ni_vav.png";
-import AithorGaneshTemple from "../../assets/Local_excursions/Aithor_ganesh_temple.png";
+import AithorGaneshTemple from "../../assets/Local_excursions/ganpati.jpg";
 import DandiKutir from "../../assets/Local_excursions/Dandi_kutir_museum.png";
 import ModheraSunTemple from "../../assets/Local_excursions/Modhera_Sun_Temple.png";
-import PatanKaPatola from "../../assets/Local_excursions/Patan_ka_patola.png";
+import PatanKaPatola from "../../assets/Local_excursions/patan.jpeg";
 import SabarmatiAshram from "../../assets/Local_excursions/Sabarmati Ashram.png";
 import SiddiSayedMosque from "../../assets/Local_excursions/Siddi_Sayed_Mosque.png";
-import KirtiToren from "../../assets/Local_excursions/Kirti_toren.png";
+import KirtiToren from "../../assets/Local_excursions/vadanagar.jpeg";
 
-import Convocations from "../../assets/Gallery_IMG/7th_Convocations.png";
-import play from "../../assets/Gallery_IMG/play.png";
-import Dummy from "../../assets/Gallery_IMG/dummy.png";
-
-
+import dance from "../../assets/Gallery_IMG/dance.JPG";
+import ebike from "../../assets/Gallery_IMG/ebike.JPG";
+import event from "../../assets/Gallery_IMG/event.JPG";
+import lab from "../../assets/Gallery_IMG/lab.JPG";
+import navratri from "../../assets/Gallery_IMG/navratri.JPG";
+import ramayan from "../../assets/Gallery_IMG/ramayan.JPG";
+import medical from "../../assets/Gallery_IMG/Medical Photo-1.jpg";
+import yellow from "../../assets/Gallery_IMG/yellow.JPG";
+import sport from "../../assets/Gallery_IMG/sport.JPG";
 
 // Empty array for your 9 images
 const GALLERY_IMAGES = [
-  { id: 1, src: Convocations, title: "7th Convocations" },
-  { id: 2, src: play, title: "Play" },
-  { id: 3, src: Dummy, title: "Dummy" },
-  { id: 4, src: Dummy, title: "Dummy" },
-  { id: 5, src: Dummy, title: "Dummy" },
-  { id: 6, src: Dummy, title: "Dummy" },
-  { id: 7, src: Dummy, title: "Dummy" },
-  { id: 8, src: Dummy, title: "Dummy" },
-  { id: 9, src: Dummy, title: "Dummy" },
+  { id: 1, src: dance, title: "7th Convocations" },
+  { id: 2, src: ebike, title: "Play" },
+  { id: 3, src: event, title: "Dummy" },
+  { id: 4, src: lab, title: "Dummy" },
+  { id: 5, src: navratri, title: "Dummy" },
+  { id: 6, src: ramayan, title: "Dummy" },
+  { id: 7, src: medical, title: "Dummy" },
+  { id: 8, src: yellow, title: "Dummy" },
+  { id: 9, src: sport, title: "Dummy" },
 ];
 
-
-
 const Localexcur = [
-  { id: 1, src: AdalajNiVav, title: "Adalaj Ni Vav", url: "https://en.wikipedia.org/wiki/Adalaj_Stepwell" },
-  { id: 2, src: AithorGaneshTemple, title: "Aithor Ganesh Temple", url: "https://en.wikipedia.org/wiki/Aithor" },
-  { id: 3, src: DandiKutir, title: "Dandi Kutir Museum", url: "https://en.wikipedia.org/wiki/Dandi_Kutir" },
-  { id: 4, src: ModheraSunTemple, title: "Modhera Sun Temple", url: "https://en.wikipedia.org/wiki/Sun_Temple,_Modhera" },
-  { id: 5, src: PatanKaPatola, title: "Patan Ka Patola", url: "https://en.wikipedia.org/wiki/Patola_sari" },
-  { id: 6, src: SabarmatiAshram, title: "Sabarmati Ashram", url: "https://en.wikipedia.org/wiki/Sabarmati_Ashram" },
-  { id: 7, src: SiddiSayedMosque, title: "Siddi Sayed Mosque", url: "https://en.wikipedia.org/wiki/Sidi_Saiyyed_Mosque" },
-  { id: 8, src: KirtiToren, title: "Kirti Toren", url: "https://en.wikipedia.org/wiki/Kirti_Toran" },
+  {
+    id: 1,
+    src: AdalajNiVav,
+    title: "Adalaj Ni Vav",
+    url: "https://en.wikipedia.org/wiki/Adalaj_Stepwell",
+  },
+  {
+    id: 2,
+    src: AithorGaneshTemple,
+    title: "Aithor Ganesh Temple",
+    url: "https://en.wikipedia.org/wiki/Aithor",
+  },
+  {
+    id: 3,
+    src: DandiKutir,
+    title: "Dandi Kutir Museum",
+    url: "https://en.wikipedia.org/wiki/Dandi_Kutir",
+  },
+  {
+    id: 4,
+    src: ModheraSunTemple,
+    title: "Modhera Sun Temple",
+    url: "https://en.wikipedia.org/wiki/Sun_Temple,_Modhera",
+  },
+  {
+    id: 5,
+    src: PatanKaPatola,
+    title: "Patan Ka Patola",
+    url: "https://en.wikipedia.org/wiki/Patola_sari",
+  },
+  {
+    id: 6,
+    src: SabarmatiAshram,
+    title: "Sabarmati Ashram",
+    url: "https://en.wikipedia.org/wiki/Sabarmati_Ashram",
+  },
+  {
+    id: 7,
+    src: SiddiSayedMosque,
+    title: "Siddi Sayed Mosque",
+    url: "https://en.wikipedia.org/wiki/Sidi_Saiyyed_Mosque",
+  },
+  {
+    id: 8,
+    src: KirtiToren,
+    title: "Kirti Toran",
+    url: "https://en.wikipedia.org/wiki/Kirti_Toran",
+  },
 ];
 
 // SponsorCard-style component for Local Excursions
@@ -94,7 +135,6 @@ const ExcursionCard = ({ item }) => {
     </a>
   );
 };
-
 
 const GalleryCard = ({ image }) => {
   return (
@@ -164,7 +204,6 @@ const Gallery = () => {
           <GalleryCard key={img.id} image={img} />
         ))}
       </div>
-
 
       <div className="relative z-10 mb-20 text-center mt-30">
         <h2 className="text-4xl md:text-7xl font-bold tracking-[0.3em] text-white uppercase font-[oswald]">
