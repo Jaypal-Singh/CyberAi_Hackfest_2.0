@@ -26,7 +26,7 @@ import gujcost from "../../../assets/sponsors/gujcost.png";
 import iste from "../../../assets/sponsors/iste.png";
 import lnt from "../../../assets/sponsors/lnt.png";
 import spu from '../../../assets/sponsors/spu.png'
-import isg from '../../../assets/sponsors/isogone.png'
+import isg from '../../../assets/sponsors/isg.png'
 import techdefence from '../../../assets/sponsors/techdefence.png'
 import iete from '../../../assets/sponsors/iete.png'
 
