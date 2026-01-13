@@ -3,13 +3,19 @@ import logo from "../../assets/hakathon_logo/logo.jpeg";
 import { GridBackground } from "../../Components/GridBackground/GridBackground";
 import "./OurTeam.css";
 import psp from "../../assets/Team/psp.jpeg";
-import pmudani from "../../assets/Team/pmudani.jpeg";
-import pjpatel from "../../assets/Team/pjpatel.jpeg";
+import pmudani from "../../assets/Team/Udani Sir.jpg";
+import pjpatel from "../../assets/Team/pjpatelsirone.jpg";
 import dummy from "../../assets/Team/dummyes.png";
+import pspone from "../../assets/Team/pspthree.png";
 
 const TEAM_DATA = {
   "Chief Patron": [
-    { id: 1, name: "Shri Prakashbhai S. Patel", role: "PRESIDENT", image: psp },
+    {
+      id: 1,
+      name: "Shri Prakashbhai S. Patel",
+      role: "PRESIDENT",
+      image: pspone,
+    },
   ],
   Patron: [
     {
@@ -19,10 +25,10 @@ const TEAM_DATA = {
       image: pmudani,
     },
   ],
-  Convenient: [
+  Convener: [
     { id: 3, name: "Dr. P. J. Patel", role: "Principal, SPCE", image: pjpatel },
   ],
-  "Co-Convenient": [
+  "Co-Convener": [
     {
       id: 4,
       name: "Mr. Sunny Vaghela",
@@ -74,6 +80,12 @@ const TEAM_DATA = {
     },
   ],
   "advisory committee": [
+    {
+      id: 301,
+      name: "Dr. Parimal Trivedi",
+      role: "Registrar",
+      image: dummy,
+    },
     {
       id: 301,
       name: "Dr. Sanjeev Kumar Punia",
@@ -171,7 +183,7 @@ const TextTeamCard = ({ member }) => (
 const OurTeam = () => {
   const LAYOUT_STRUCTURE = [
     { titles: ["Chief Patron", "Patron"] },
-    { titles: ["Convenient", "Co-Convenient"] },
+    { titles: ["Convener", "Co-Convener"] },
     { titles: ["Event Coordinators"] },
     { titles: ["organising committee"] },
     { titles: ["advisory committee"] },
